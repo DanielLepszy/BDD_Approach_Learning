@@ -1,6 +1,6 @@
 from seleniumpagefactory import PageFactory
 
-from model.card_model import InventoryCardModel
+from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.inventory_page.sections.model.card_model import InventoryCardModel
 
 
 class InventorySection(PageFactory):

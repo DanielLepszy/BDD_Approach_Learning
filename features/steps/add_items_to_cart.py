@@ -1,16 +1,13 @@
 from behave import given, when, then
 
-from test.features.steps.page_models.page_models_factory.page_models_factory import PageModelsFactory
-from test.features.steps.page_models.page_models_factory.pages.login_page.login_page import LoginPageModel
 
-
-@given('user log in to app using specified credentials: "{user_name}" and "{user_pass}"')
-def test_given_impl(context, user_name, user_pass):
+@given('user log in to app using specified credentials: standard_user and secret_sauce')
+def test_given_impl(context):
     context.driver.get('https://www.saucedemo.com/')
     context.login_page = context.page_factory.get_login_page()
-    context.login_page.set_credentials_to_inputs(user_name, user_pass)
+    context.login_page.set_credentials_to_inputs('standard_user', 'secret_sauce')
 
-@when('user add two items to cart')
+@when('user add selected items to cart')
 def test_when_impl(context):
     context.inventory_page = context.page_factory.get_inventory_page()
     context.inventory_section = context.inventory_page.get_inventory_section()

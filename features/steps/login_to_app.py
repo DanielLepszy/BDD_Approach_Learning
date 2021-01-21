@@ -1,6 +1,6 @@
 from behave import given, when, then
 
-from test.features.steps.page_models.page_models_factory.pages.login_page.login_page import LoginPageModel
+from core_implementation.page_models.page_models_factory.pages.login_page.login_page import LoginPageModel
 
 
 @given('user open https://www.saucedemo.com/')
