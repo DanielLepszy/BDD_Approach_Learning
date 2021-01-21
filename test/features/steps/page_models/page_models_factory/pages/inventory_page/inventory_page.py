@@ -1,3 +1,6 @@
+from seleniumpagefactory import PageFactory
+from selenium import webdriver
+
 from sections.footer_section import FooterSection
 from sections.header_section import HeaderSection
 from sections.inventory_section import InventorySection
