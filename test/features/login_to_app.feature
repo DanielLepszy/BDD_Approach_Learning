@@ -9,4 +9,4 @@ Feature: Log in to app
       | user_name               | user_pass    |
       | standard_user           | secret_sauce |
       | problem_user            | secret_sauce |
-      | performance_glitch_user | secret_sauce |cgit
+      | performance_glitch_user | secret_sauce |
