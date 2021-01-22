@@ -8,7 +8,6 @@ Feature: Inventory user action
       | Sauce Labs Bike Light |
     And click in shopping trolley icon to open cart
     Then user cart contain previous added items
-
-#    Examples: User types
-#      | user_name     | user_pass    |
-#      | standard_user | secret_sauce |
+      | item title            |
+      | Sauce Labs Backpack   |
+      | Sauce Labs Bike Light |

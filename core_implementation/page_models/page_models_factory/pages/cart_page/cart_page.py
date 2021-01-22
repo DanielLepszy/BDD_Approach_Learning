@@ -6,9 +6,9 @@ from core_implementation.page_models.page_models_factory.pages.cart_page.model.i
 
 class UserCartPageModel(PageFactory):
 
-    def __init__(self, driver):
+    def __init__(self, driver: webdriver):
         super().__init__()
-        self.driver = driver
+        self.driver: webdriver = driver
         # self.highlight = True
 
     locators = {
@@ -20,14 +20,15 @@ class UserCartPageModel(PageFactory):
 
     def get_item_list_model_in_cart(self) -> list[ItemModelInCart]:
         item_list: list[ItemModelInCart] = []
-        for cart_item in self.cart_items:
+        found_cart_items = self.driver.find_elements_by_css_selector('.cart_item')
+        for cart_item in found_cart_items:
             # item_title = cart_item.find_element_by_xpath("/descendant::*[contains(@class,'inventory_item_name')]")
             # item_price = cart_item.find_element_by_xpath("/descendant::*[contains(@class,'inventory_item_price')]")
 
-            item_title = cart_item.find_element_by_xpath('.inventory_item_name')
-            item_price = cart_item.find_element_by_xpath('.inventory_item_price')
-            item_remove_button = cart_item.find_element_by_xpath("/descendant::button[text()='remove']")
-            item_quantity = cart_item.find_element_by_css(".cart_quantity")
+            item_title = cart_item.find_element_by_css_selector('.inventory_item_name')
+            item_price = cart_item.find_element_by_css_selector('.inventory_item_price')
+            item_remove_button = cart_item.find_element_by_css_selector('button.btn_secondary')
+            item_quantity = cart_item.find_element_by_css_selector(".cart_quantity")
             item_list.append(ItemModelInCart(item_title, item_price, item_remove_button, item_quantity))
 
         return item_list
