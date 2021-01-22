@@ -3,7 +3,6 @@ from core_implementation.page_models.page_models_factory.page_models_factory imp
 
 
 def before_all(context):
-    print('ALLLL')
     context.driver = Browsers.get_driver()
     context.page_factory = PageModelsFactory(context.driver)
 

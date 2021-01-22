@@ -15,7 +15,6 @@ class UserCartPageModel(PageFactory):
         "cart_items": ('CSS', '.cart_item'),
         "continue_shopping_button": ('CSS', '.cart_footer a[href$="./inventory.html"]'),
         "checkout_button": ('CSS', '.cart_footer a[href$="./checkout-step-one.html"]'),
-        "error_header": ('CSS', 'h3[data-test="error"]'),
     }
 
     def get_item_list_model_in_cart(self) -> list[ItemModelInCart]:
