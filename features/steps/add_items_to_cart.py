@@ -9,10 +9,12 @@ def test_given_impl(context):
 
 @when('user add selected items to cart')
 def test_when_impl(context):
+    items_name = []
+    for row in context.table: items_name.append(row['item title'])
+
     context.inventory_page = context.page_factory.get_inventory_page()
     inventory_section = context.inventory_page.get_inventory_section()
-    inventory_section.add_to_cart_specified_items(['Sauce Labs Backpack', 'Sauce Labs Bike Light'])
-
+    inventory_section.add_to_cart_specified_items(items_name)
 
 @when('click in shopping trolley icon to open cart')
 def test_when_impl(context):
@@ -23,4 +25,4 @@ def test_when_impl(context):
 @then('user cart contain previous added items')
 def test_step_impsl(context):
     user_cart = context.page_factory.get_user_cart_page().get_item_list_model_in_cart()
-   
+

@@ -2,8 +2,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.inventory_page.inventory_page import InventoryPageModel
 from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.login_page.login_page import LoginPageModel
-from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.cart_page.cart_page import UserCartPage, \
-    UserCartPageModel
+from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.cart_page.cart_page import  UserCartPageModel
 
 
 class PageModelsFactory:
