@@ -6,7 +6,10 @@ def before_all(context):
     context.driver = Browsers.get_driver()
     context.page_factory = PageModelsFactory(context.driver)
 
-# def after_all(context):  # cleanup after tests run
-#     context.behave_driver.quit()
-#
 
+def after_feature(context, feature):
+    '''Logout from app'''
+    if feature.name != 'Log in to app with unpermitted user':
+        context.page_factory.get_inventory_page().get_header_section().logout_from_app()
+    if feature.status.failure:
+        # TODO set allure report

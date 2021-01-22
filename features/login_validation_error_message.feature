@@ -1,4 +1,4 @@
-Feature: Log in to app
+Feature: Log in to app with unpermitted user
 
   Scenario Outline: Try to log in to unpermitted users
     Given unpermitted user open https://www.saucedemo.com/

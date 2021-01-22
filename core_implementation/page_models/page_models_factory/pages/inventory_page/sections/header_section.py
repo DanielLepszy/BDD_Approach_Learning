@@ -24,7 +24,7 @@ class HeaderSection(PageFactory):
     }
 
     def logout_from_app(self):
-        # WaitFactory.wait_until_element_presence(self.driver, '#menu_button_container .bm-burger-button')
+        WaitFactory.wait_until_element_presence(self.driver, '#menu_button_container .bm-burger-button')
         # self.driver.find_element_by_css_selector('#menu_button_container .bm-burger-button').click()
         self.menu_burger_button.click()
         WaitFactory.wait_until_visibility_of_element(self.driver, self.logout_sidebar)
@@ -35,5 +35,4 @@ class HeaderSection(PageFactory):
 
     def get_amount_of_selceted_items(self):
         WaitFactory.wait_until_visibility_of_element(self.driver, self.shopping_counter)
-        # shopping_counter = self.driver.find_element_by_css_selector('#shopping_cart_container .shopping_cart_badge')
         return int(self.shopping_counter.text)

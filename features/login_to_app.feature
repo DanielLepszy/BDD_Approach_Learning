@@ -1,4 +1,4 @@
-Feature: Log in to app
+Feature: Log in to app with proper user
 
   Scenario Outline: Log in to app as all type of users
     Given user open https://www.saucedemo.com/
