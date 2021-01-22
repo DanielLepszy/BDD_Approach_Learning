@@ -20,3 +20,11 @@ Feature: Remove all items from user cart
       | Sauce Labs Bike Sauce Labs Onesie        |
       | Test.allTheThings() T-Shirt (Red)        |
     Then click CONTINUE SHOPPING button
+    And check if items are able to add again to cart
+      | item title                               |
+      | Sauce Labs Backpack                      |
+      | Sauce Labs Bike Light                    |
+      | Sauce Labs Sauce Labs Bolt T-Shirt Light |
+      | Sauce Labs Fleece Jacket                 |
+      | Sauce Labs Bike Sauce Labs Onesie        |
+      | Test.allTheThings() T-Shirt (Red)        |

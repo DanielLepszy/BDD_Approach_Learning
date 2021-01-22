@@ -32,4 +32,4 @@ class InventorySection(PageFactory):
 
         for cart_model in available_items_on_page:
             if cart_model.item_title.text in items_name:
-                cart_model.add_card.click()
+                cart_model.add_card_button.click()

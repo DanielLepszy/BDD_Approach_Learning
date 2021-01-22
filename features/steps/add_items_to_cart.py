@@ -34,3 +34,5 @@ def test_step_impsl(context):
 
     for item in items_in_cart:
         delayed_assert.expect(item.title.text in items_name, "Value don't match. Probably wrong items name")
+
+    delayed_assert.assert_all()
