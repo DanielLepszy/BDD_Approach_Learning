@@ -1,7 +1,6 @@
 from seleniumpagefactory import PageFactory
 from selenium import webdriver
 
-
 class LoginPageModel(PageFactory):
 
     def __init__(self, driver):

@@ -1,7 +1,7 @@
 from seleniumpagefactory import PageFactory
 from selenium import webdriver
 
-from core_implementation.page_models.page_models_factory.pages.cart_page.model.item_model_in_cart import ItemModelInCart
+from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.cart_page.model.item_model_in_cart import ItemModelInCart
 
 
 class UserCartPageModel(PageFactory):

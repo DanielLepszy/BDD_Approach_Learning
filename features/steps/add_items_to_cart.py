@@ -1,7 +1,7 @@
 from behave import given, when, then
 from delayed_assert import delayed_assert
 
-from core_implementation.page_models.page_models_factory.pages.cart_page.model.item_model_in_cart import ItemModelInCart
+from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.cart_page.model.item_model_in_cart import ItemModelInCart
 
 
 @given('user log in to app using specified credentials: standard_user and secret_sauce')

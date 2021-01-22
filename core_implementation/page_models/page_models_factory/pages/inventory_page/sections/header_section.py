@@ -15,7 +15,7 @@ class HeaderSection(PageFactory):
         "shopping_trolley_icon": ('CSS', '#shopping_cart_container .fa-fw'),
         "shopping_counter": ('CSS', '#shopping_cart_container .shopping_cart_badge'),
         "app_logo": ('CSS', '.app_logo'),
-        "product_label": ('CSS', '#inventory_filter_container .product_label'),
+        "product_label": ('CSS', '#inventory_cdilter_container .product_label'),
         "menu_burger_button": ('CSS', '#menu_button_container .bm-burger-button'),
         "all_items_sidebar": ('ID', 'inventory_sidebar_link'),
         "about_sidebar": ('ID', 'about_sidebar_link'),

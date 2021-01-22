@@ -1,6 +1,6 @@
 from behave import given, when, then
 
-from core_implementation.page_models.page_models_factory.pages.login_page.login_page import LoginPageModel
+from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.login_page.login_page import LoginPageModel
 
 
 @given('unpermitted user open https://www.saucedemo.com/')
