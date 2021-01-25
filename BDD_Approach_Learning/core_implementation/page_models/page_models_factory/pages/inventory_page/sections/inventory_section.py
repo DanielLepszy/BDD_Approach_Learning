@@ -1,3 +1,5 @@
+import logging
+
 from seleniumpagefactory import PageFactory
 
 from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.inventory_page.sections.model.card_model import InventoryCardModel
@@ -25,6 +27,7 @@ class InventorySection(PageFactory):
             item_model = InventoryCardModel(image_element, add_card_element, price_element, item_title)
             all_elements.append(item_model)
 
+        logging.info('Get all items model like price,title and picture in inventory page')
         return all_elements
 
     def add_to_cart_specified_items(self, items_name: list):
@@ -33,3 +36,5 @@ class InventorySection(PageFactory):
         for cart_model in available_items_on_page:
             if cart_model.item_title.text in items_name:
                 cart_model.add_card_button.click()
+
+        logging.info('Add to shopping card specified items')

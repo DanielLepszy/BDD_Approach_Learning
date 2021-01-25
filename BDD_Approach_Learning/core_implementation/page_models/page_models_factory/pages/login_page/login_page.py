@@ -26,5 +26,4 @@ class LoginPageModel(PageFactory):
         self.password_input.send_keys(password)
         self.login_button.click()
 
-        logging.info('AAAAAAAAAAAAAAAAAAAAAAAAAAA')
         logging.info(f'Set username:{username} and pass: {password} to input and click login button')

@@ -1,3 +1,5 @@
+import logging
+
 from selenium.webdriver.common.by import By
 from seleniumpagefactory import PageFactory
 from selenium import webdriver
@@ -29,6 +31,7 @@ class HeaderSection(PageFactory):
         self.menu_burger_button.click()
         WaitFactory.wait_until_visibility_of_element(self.driver, self.logout_sidebar)
         self.logout_sidebar.click()
+        logging.info('Logout from the app')
 
     def get_sidebars_elements(self) -> list:
         return self.driver.find_elements_by_xpath('//nav/descendant::a')

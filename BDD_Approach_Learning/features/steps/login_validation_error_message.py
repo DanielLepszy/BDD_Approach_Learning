@@ -1,3 +1,5 @@
+import logging
+
 from behave import given, when, then
 
 from BDD_Approach_Learning.core_implementation.page_models.page_models_factory.pages.login_page.login_page import LoginPageModel

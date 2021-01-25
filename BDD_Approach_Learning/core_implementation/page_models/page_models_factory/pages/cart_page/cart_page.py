@@ -1,3 +1,5 @@
+import logging
+
 from seleniumpagefactory import PageFactory
 from selenium import webdriver
 
@@ -21,8 +23,6 @@ class UserCartPageModel(PageFactory):
         item_list: list[ItemModelInCart] = []
         found_cart_items = self.driver.find_elements_by_css_selector('.cart_item')
         for cart_item in found_cart_items:
-            # item_title = cart_item.find_element_by_xpath("/descendant::*[contains(@class,'inventory_item_name')]")
-            # item_price = cart_item.find_element_by_xpath("/descendant::*[contains(@class,'inventory_item_price')]")
 
             item_title = cart_item.find_element_by_css_selector('.inventory_item_name')
             item_price = cart_item.find_element_by_css_selector('.inventory_item_price')
@@ -30,4 +30,5 @@ class UserCartPageModel(PageFactory):
             item_quantity = cart_item.find_element_by_css_selector(".cart_quantity")
             item_list.append(ItemModelInCart(item_title, item_price, item_remove_button, item_quantity))
 
+        logging.info('Create model items list in shopping cart')
         return item_list
