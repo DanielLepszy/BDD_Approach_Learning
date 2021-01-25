@@ -1,7 +1,7 @@
 ./automation_testing/tasks/CH01/01_02/geckodriver.log
 /UI_tests_aut/.pytest_cache
 *.log
-.idea
+*.idea
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -142,4 +142,5 @@ dmypy.json
 cython_debug/
 
 #report_allure
-features/report
+BDD_Approach_Learning/features/report
+*.geckodriver.log
