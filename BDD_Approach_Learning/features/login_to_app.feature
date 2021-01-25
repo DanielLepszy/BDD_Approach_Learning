@@ -1,5 +1,6 @@
 Feature: Log in to app with proper user
 
+  @login_proper_users
   Scenario Outline: Log in to app as all type of users
     Given user open https://www.saucedemo.com/
     When set username: "<user_name>" and password: "<user_pass>" to inputs and click LOGIN button

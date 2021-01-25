@@ -1,5 +1,6 @@
 Feature: Inventory user action
 
+  @add_items_to_cart
   Scenario: Add items to cart and check shopping list properity
     Given user log in to app using specified credentials: standard_user and secret_sauce
     When user add selected items to cart

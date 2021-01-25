@@ -1,5 +1,6 @@
 Feature: Remove all items from user cart
 
+  @remove_items_from_cart
   Scenario: Remove all added items from user cart and continue shopping
     Given standard user log in to app
     When user add whole items to cart

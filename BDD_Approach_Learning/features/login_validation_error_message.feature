@@ -1,5 +1,6 @@
 Feature: Log in to app with unpermitted user
 
+  @login_validation
   Scenario Outline: Try to log in to unpermitted users
     Given unpermitted user open https://www.saucedemo.com/
     When set wrong username: "<user_name>" and password: "<user_pass>" to inputs and click LOGIN button
