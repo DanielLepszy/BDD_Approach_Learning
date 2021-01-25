@@ -1,5 +1,7 @@
 from seleniumpagefactory import PageFactory
 from selenium import webdriver
+import logging
+
 
 class LoginPageModel(PageFactory):
 
@@ -23,3 +25,6 @@ class LoginPageModel(PageFactory):
         self.username_input.send_keys(username)
         self.password_input.send_keys(password)
         self.login_button.click()
+
+        logging.info('AAAAAAAAAAAAAAAAAAAAAAAAAAA')
+        logging.info(f'Set username:{username} and pass: {password} to input and click login button')
