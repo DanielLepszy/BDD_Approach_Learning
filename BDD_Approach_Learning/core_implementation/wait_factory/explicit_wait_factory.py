@@ -9,7 +9,6 @@ class WaitFactory:
 
     @staticmethod
     def wait_until_element_presence(driver, locator):
-        # presence of element
         WebDriverWait(driver, WaitFactory.time).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, locator))
         )
